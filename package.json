@@ -1,0 +1,9 @@
+{
+  "name": "osudle-solver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "index.js",
+  "dependencies": {
+    "asciify-image": "^0.1.10"
+  }
+}
