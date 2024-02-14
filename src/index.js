@@ -31,8 +31,8 @@ const ROOT_PROMPT = {
 };
 
 (async () => {
-  let data;
-  fetch('https://www.osudle.com/api/dailies/').then(response => response.json()).then(json => data = json);
+  const response = await fetch('https://www.osudle.com/api/dailies/');
+  const data = await response.json();
 
   do {
     const { action } = await inquirer.prompt(ROOT_PROMPT);
