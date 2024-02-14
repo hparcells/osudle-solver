@@ -8,14 +8,13 @@ function formatSolution(solution) {
 (async () => {
   const response = await fetch('https://www.osudle.com/api/dailies/');
   const data = await response.json();
-  const solution = data[2];
+  const solution = data[data.length - 1];
 
   console.log(formatSolution(solution));
 
   const ascii = await asciify(solution.background, {
-    fit: 'box',
-    width: 150,
-    height: 75,
+    fit: 'width',
+    width: process.stdout.columns * 0.5,
   });
   console.log(ascii);
 })();
