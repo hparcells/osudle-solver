@@ -1,8 +1,9 @@
 #! /usr/bin/env node
 const asciify = require('asciify-image');
+const chalk = require('chalk');
 
 function formatSolution(solution) {
-  return `${solution.artist} - ${solution.title} [${solution.diff_name}] mapped by ${solution.mapper_name}`;
+  return `${solution.artist} - ${chalk.underline.bold(`${solution.title} [${solution.diff_name}]`)} (${solution.mapper_name}, ${solution.star_rating}*) | ${solution.map_url}`;
 }
 
 (async () => {
@@ -16,5 +17,6 @@ function formatSolution(solution) {
   });
 
   console.log(ascii);
+  console.log(chalk.bgWhite.black(`osudle! #${solution.MOTD}`));
   console.log(formatSolution(solution));
 })();

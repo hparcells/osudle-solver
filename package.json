@@ -4,6 +4,7 @@
   "main": "index.js",
   "bin": "index.js",
   "dependencies": {
-    "asciify-image": "^0.1.10"
+    "asciify-image": "^0.1.10",
+    "chalk": "^4.1.2"
   }
 }
