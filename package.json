@@ -1,8 +1,8 @@
 {
   "name": "osudle-solver",
   "version": "1.0.0",
-  "main": "index.js",
-  "bin": "index.js",
+  "main": "src/index.js",
+  "bin": "src/index.js",
   "dependencies": {
     "asciify-image": "^0.1.10",
     "chalk": "^4.1.2"
